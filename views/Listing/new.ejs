@@ -1,0 +1,65 @@
+<% layout("./layouts/boilerplate.ejs") %>
+<body>
+    
+    
+    <form method="POST", action="/listing" novalidate class="needs-validation" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h3>Create New Listing</h3>
+        <div class="mb-3">
+            <label class="form-label" for="title">Title</label>
+            <input name="Listing[title]", type="text", placeholder="Enter title" class="form-control" required>
+            <div class="valid-feedback">Title looks good!</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="description">Description</label>
+            <textarea placeholder="description", name="Listing[description]" class="form-control" required></textarea>
+            <div class="invalid-feedback">Please enter a short description</div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label" for="image">Upload Listing Image</label>
+            <input name="Listing[image]", type="file", class="form-control" required>
+            <div class="invalid-feedback">Please upload image</div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-4">
+            <label class="form-label" for="price">Price</label>
+            <input name="Listing[price]", placeholder="1200" class="form-control" required>
+            <div class="invalid-feedback">Price should be valid</div>
+        </div>
+        
+        <div class="mb-3 col-md-8">
+            <label class="form-label" for="country">Country</label>
+            <input name="Listing[country]", type="text", placeholder="India" class="form-control" required>
+            <div class="invalid-feedback">Country should be valid</div>
+        </div>
+        </div>
+        
+        <div class="mb-3">
+            <label class="form-label" for="location">Location</label>
+            <input name="Listing[location]", type="text", placeholder="Kochi, Kerala" class="form-control" required>
+            <div class="invalid-feedback">Location should be valid</div>
+        </div>
+        <select class="form-select"  name="Listing[category]" required>
+        <option value="">Select Category</option>
+        <option value="Summer Destination">Summer Destination</option>
+        <option value="Iconic City">Iconic City</option>
+        <option value="Beach">Beach</option>
+        <option value="Mountains">Mountains</option>
+        <option value="Nature">Nature</option>
+        <option value="Resort">Resort</option>
+        <option value="Downtown">Downtown</option>
+        <option value="Farmhouse">Farmhouse</option>
+        
+        </select>
+        <br><br>
+        <button type="submit" class="btn btn-dark add-btn">Add</button>
+        </div>
+        </div>
+        
+        
+    </form>
+    <br>
+    <br>
+</body>
+ 

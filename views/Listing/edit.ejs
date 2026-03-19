@@ -1,0 +1,61 @@
+<% layout("./layouts/boilerplate.ejs") %>
+<body>
+    <form method="POST", action="/listing/<%=listingData._id%>?_method=PUT" novalidate class="needs-validation", enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-8 offset-2">
+                <h3>Edit your Listing</h3>
+            
+        <div class="mb-3">
+            <label for="title" class="from-label">Title</label>
+            <input name="Listing[title]", type="text", value="<%=listingData.title%>" class="form-control" required>
+            <div class="valid-feedback">Title looks good!</div>
+        </div>
+        <div class="mb-3">
+            <label for="description" class="form-label">Dscription</label>
+            <textarea name="Listing[description]" class="form-control" required> <%=listingData.description%></textarea>
+            <div class="invalid-feedback">Please enter a short description</div>
+        </div>
+        <div class="mb-3 preview">
+            Current Listing image<br>
+            <img src="<%=currentImage %>">
+        </div>
+        <div class="mb-3">
+            <label for="image", class="form-label">Upload New Image</label>
+            <input name="Listing[image]", type="file", class="form-control" >
+        </div>
+        <div class="mb-3">
+            <label for="price" class="form-label">Price</label>
+            <input name="Listing[price]",, value="<%=listingData.price%>" class="form-control" required>
+            <div class="invalid-feedback">Price should be valid</div>
+        </div>
+        <div class="mb-3">
+            <label for="location" class="form-label"> Location</label>
+            <input name="Listing[location]",type="text", value="<%=listingData.location%>" class="form-control"required>
+            <div class="invalid-feedback">Location should be valid</div>
+        </div>
+        <div class="mb-3">
+            <label for="country" class="form-label"> Country</label>
+            <input name="Listing[country]",type="text", value="<%=listingData.country%>" class="form-control"required>
+            <div class="invalid-feedback">Country should be valid</div>
+        </div>
+        <select class="form-select"  name="Listing[category]" required>
+        <option value="">Select Category</option>
+        <option value="Summer Destination">Summer Destination</option>
+        <option value="Iconic City">Iconic City</option>
+        <option value="Beach">Beach</option>
+        <option value="Mountains">Mountains</option>
+        <option value="Nature">Nature</option>
+        <option value="Resort">Resort</option>
+        <option value="Downtown">Downtown</option>
+        <option value="Farmhouse">Farmhouse</option>
+        
+        </select>
+        <br>
+        <br>
+        <button type="submit" class="btn btn-dark edit-btn">Done</button>
+        </div>
+        </div>
+        
+    </form>
+    <br><br>
+</body>

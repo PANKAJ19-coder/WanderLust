@@ -1,0 +1,265 @@
+body{
+    font-family: "Plus Jakarta Sans" !important;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+.nav-link:focus{
+    outline:none !important;
+}
+.container{
+    flex:1;
+}
+
+.navbar{
+    min-height:6rem;
+    background-color:white;
+}
+.fa-compass{
+    font-size:2.2rem;
+    color:#fe424d;
+}
+.nav-link{
+    color:#111111 !important;
+    font-size:1.1rem !important;
+}
+
+.f-info{
+    height:8rem;
+    background-color:#ebebeb;
+}
+
+.f-info-socials i{
+    font-size:1.3rem;
+    margin-right:1rem;
+}
+.f-info-links a{
+    text-decoration:none;
+    color:#222222;
+}
+.f-info-links a:hover{
+    text-decoration:underline;
+}
+.f-info{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+.f-info div{
+    height:100%;
+}
+.f-info-socials div, .f-info-brand div, .f-info-links div{
+    display:flex;
+    flex-direction:row;
+    align-items:center;
+}
+/*card*/
+.listing-card{
+    border:none !important;
+    margin-bottom:2rem;
+    
+}
+.card-body{
+    padding:0 !important;
+    font-weight: 400 !important;
+    
+}
+.card-img-top{
+    border-radius:1rem !important;
+    width:100% !important;
+    object-fit: cover !important;
+    height:19rem;
+}
+.card-img-overlay{
+    opacity:0;
+}
+.card-img-top:hover{
+    opacity:0.8;
+    background-color:white;
+}
+.row a{
+    text-decoration: none !important;
+}
+
+/*New.ejs*/
+.add-btn{
+    background-color:#fe424d !important;
+    border:none !important;
+}
+/*edit.ejs*/
+.edit-btn{
+    background-color:#fe424d !important;
+    border:none !important;
+}
+/*show*/
+.show-img{
+    object-fit:cover !important;
+    height:52vh;
+}
+.show-btn{
+    display:flex !important;
+}
+.show-btn .btn{
+    background-color: #fe424d !important;
+    border:none;
+}
+/*review Form*/
+.reviewform .btn{
+    background-color: #fe424d !important;
+    border:none;
+}
+.reviewDeleteBtn{
+    background-color: #fe424d !important;
+    border:none !important;
+}
+.preview img{
+    height:15rem !important;
+    width:20rem !important;
+}
+/*filters*/
+
+#filters{
+    display:flex;
+    flex-wrap:wrap;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom:2rem !important;
+}
+
+
+.filter{
+    margin-left:1.5rem;
+    display:flex;
+    align-items:center;
+    opacity:0.7;
+}
+.filter a{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #222222;
+}
+.filter p{
+    font-size:0.95rem;
+}
+.filter:hover{
+    opacity:1;
+    cursor:pointer;
+}
+.tax-switch{
+    border: 1px solid black;
+    border-radius: 0.8rem;
+    height:3rem;
+    min-width:15rem;
+    padding: 0.5rem;
+    
+}
+.dropdown-menu{
+    padding:0.5rem !important;
+}
+.cow{
+    margin-right:3rem;
+}
+/* tax*/
+.tax-info{
+    display:none;
+}
+
+/* Map*/
+#map{
+    width:100%;
+    height:21rem;
+}
+.dropdown-toggle{
+    background-color:#fe424d !important;
+    border: none !important;
+}
+/*Responsive */
+@media(max-width:993px){
+    .listings .anchor{
+        max-width:20rem;
+    }
+}
+@media(max-width:815px){
+    .listings .anchor{
+        max-width:15rem;
+    }
+    .listing-card img{
+        height:14rem;
+    }
+    
+}
+@media(max-width:768px){
+    .listings .anchor{
+        max-width:14rem;
+    }
+    .listing-card img{
+        height:13rem;
+    }
+    #filters{
+        margin-bottom: 1.5rem !important;
+        justify-content: flex-start;
+    }
+}
+
+@media(max-width:480px){
+    .listings .anchor{
+        max-width:14rem;
+    }
+    .listing-card img{
+        height:13rem;
+    }
+    .listings{
+        flex-wrap: nowrap;
+    }
+}
+@media(max-width:448px){
+    .listings .anchor{
+        max-width:12.5rem;
+    }
+    .listing-card img{
+        height:11rem;
+    }
+}
+@media(max-width:395px){
+    .listings .anchor{
+        max-width:11.5rem;
+    }
+    .listing-card img{
+        height:10rem;
+    }
+}
+@media(max-width:368px){
+    .listings .anchor{
+        max-width:11rem;
+    }
+    .listing-card img{
+        height:9rem;
+    }
+
+}
+/*category*/
+.search-btn{
+    background-color: #fe424d !important ;
+    color: white !important;
+    border-radius:25rem !important;
+    padding:0 1.5rem 0 1.5rem !important;
+}
+.search-inp{
+    border-radius:25px !important;
+    padding: 0.5rem 2rem 0.5rem 2rem !important;
+}
+/* search*/
+.searchHeading{
+    margin-bottom:2.5rem;
+    margin-top: 0.5rem;
+    color:#4b4b4b;
+}
+.noresult{
+    color:#4b4b4b;
+}

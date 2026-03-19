@@ -1,0 +1,54 @@
+<nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top mb-3">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="/listing"><i class="fa-regular fa-compass"></i></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="/listing">Explore</a>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto">
+        <li>
+          <form class="d-flex" role="search" method="POST", action="/listing/search">
+        <input class="form-control me-2 search-inp" type="search" placeholder="Enter location" name="region"/>
+        <button class="btn search-btn" type="submit">Search</button>
+      </form>
+        </li>
+      </ul>
+        <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="/listing/new">Add your Home&nbsp;</a>
+        </li>
+        <div class="btn-group">
+  <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-solid fa-sliders"></i>&nbsp;Filters
+  </button>
+  <ul class="dropdown-menu dropdown-menu-end">
+    <div class="tax-switch">
+        <div class="form-check-reverse form-switch ">
+        <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+        <label class="form-check-label" for="switchCheckDefault">Display total after taxes</label>
+        </div>
+        </div>
+  </ul>
+</div>
+        <%if(!currUser) {%>
+        <li class="nav-item">
+          <a class="nav-link" href="/signup"><b>Sign up</b></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/login"><b>Login</b></a>
+        </li>
+        <%}%>
+        <%if(currUser){%>
+        <li class="nav-item">
+          <a class="nav-link" href="/logout"><b>Logout</b></a>
+        </li>
+      <%}%>
+        </ul>
+    </div>
+  </div>
+</nav>
